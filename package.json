@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "exe": "browser-sync start -s --index ./exercise_files/index.html -f ./exercise_files/index.js"
+    "start": "browser-sync start -s --index ./exercise_files/dist/index.html -f ./exercise_files/src/index.js",
+    "dev": "webpack-dev-server --open --colors"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,14 @@
   },
   "homepage": "https://github.com/xrr2016/react_essential_training#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.8"
+    "babel-cli": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "browser-sync": "^2.18.8",
+    "html-loader": "^0.4.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   }
 }

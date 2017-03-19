@@ -1,2 +1,5 @@
 # react_essential_training
-learning react 
+
+[Link](https://www.youtube.com/watch?v=guhWOUCBFbw&list=PLmdtnUrEhUNpPqx2UArznKwrujcrHNsnI)
+
+learning react

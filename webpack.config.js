@@ -12,12 +12,24 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: [
           path.resolve(__dirname, 'node_modules')
         ],
         options: {presets: ['latest']}
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!autoprefixer-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader'}]
       },
       {
         test: /\.html$/,

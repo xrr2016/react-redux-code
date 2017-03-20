@@ -2,13 +2,13 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './index.js',
   output: {
     path: '/dist/assets',
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
-  context: path.resolve(__dirname, 'exercise_files'),
+  context: path.resolve(__dirname, 'activity_counter'),
   module: {
     rules: [
       {
@@ -34,6 +34,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader'
+      },
+      {
+        test: /\.jpg$/,
+        use: ['url-loader?limit=10000']
       }
     ]
   },
@@ -41,7 +45,7 @@ module.exports = {
     hot: true,
     inline: true,
     compress: true,
-    contentBase: path.join(__dirname, 'exercise_files/dist'),
+    contentBase: path.join(__dirname, 'activity_counter/dist'),
     port: 8000
   },
   plugins: [

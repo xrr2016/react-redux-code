@@ -1,10 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 // import { SkiDayCount } from './components/ski_day_count'
 // import { SkiDayList } from './components/ski_day_list'
 import { App } from './components/app_es6'
-import { Oops404 } from './components/oops_404'
+// import { Oops404 } from './components/oops_404'
 import './style/global.scss'
 
 window.React = React
@@ -31,11 +30,6 @@ window.React = React
 // ]
 
 render(
-  <Router>
-    <div>
-      <Route exact path='/' component={App} />
-      <Route path='*' component={Oops404} />
-    </div>
-  </Router>,
+  <App />,
   document.getElementById('root')
 )

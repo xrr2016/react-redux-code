@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
-  context: path.resolve(__dirname, 'activity_counter'),
+  context: path.resolve(__dirname, 'react-router'),
   module: {
     rules: [
       {
@@ -45,7 +45,7 @@ module.exports = {
     hot: true,
     inline: true,
     compress: true,
-    contentBase: path.join(__dirname, 'activity_counter/dist'),
+    contentBase: path.join(__dirname, 'react-router/dist'),
     port: 8000
   },
   plugins: [

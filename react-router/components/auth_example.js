@@ -7,7 +7,7 @@ const AuthExample = () => (
       <AuthButton />
       <ul>
         <li><Link to='/public'>Public Page</Link></li>
-        <li><Link to='/prptected'>Protected Page</Link></li>
+        <li><Link to='/protected'>Protected Page</Link></li>
       </ul>
       <Route path='/public' component={Public} />
       <Route path='/login' component={Login} />
@@ -80,7 +80,7 @@ class Login extends Component {
     }
     return (
       <div>
-        <p>You must login to view the page at {from.pathname}</p>
+        <p>{this.props.username} You must login to view the page at {from.pathname}</p>
         <button onClick={this.login}>Login</button>
       </div>
     )
@@ -88,6 +88,6 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  username: PropTypes.string.isRequired
+  username: PropTypes.isRequired
 }
 export default AuthExample

@@ -5,6 +5,6 @@ import { render } from 'react-dom'
 import AuthExample from './components/auth_example'
 
 render(
-  <AuthExample username={111} />,
+  <AuthExample username={'xrr'} />,
   document.getElementById('root')
 )

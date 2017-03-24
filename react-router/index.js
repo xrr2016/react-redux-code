@@ -3,9 +3,10 @@ import { render } from 'react-dom'
 // import BasicExample from './components/basic_example'
 // import ParamsExample from './components/params_example'
 // import AuthExample from './components/auth_example'
-import CustomLinkExample from './components/custom_link'
+// import CustomLinkExample from './components/custom_link'
+import PreExample from './components/prevent_transtion'
 
 render(
-  <CustomLinkExample />,
+  <PreExample />,
   document.getElementById('root')
 )

@@ -4,9 +4,10 @@ import { render } from 'react-dom'
 // import ParamsExample from './components/params_example'
 // import AuthExample from './components/auth_example'
 // import CustomLinkExample from './components/custom_link'
-import PreExample from './components/prevent_transtion'
+// import PreExample from './components/prevent_transtion'
+import NotMatchExample from './components/not_match'
 
 render(
-  <PreExample />,
+  <NotMatchExample />,
   document.getElementById('root')
 )

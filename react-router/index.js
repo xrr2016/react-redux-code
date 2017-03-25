@@ -5,9 +5,10 @@ import { render } from 'react-dom'
 // import AuthExample from './components/auth_example'
 // import CustomLinkExample from './components/custom_link'
 // import PreExample from './components/prevent_transtion'
-import NotMatchExample from './components/not_match'
+// import NotMatchExample from './components/not_match'
+import RecursiveExample from './components/recursive_path'
 
 render(
-  <NotMatchExample />,
+  <RecursiveExample />,
   document.getElementById('root')
 )

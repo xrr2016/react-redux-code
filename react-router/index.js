@@ -6,9 +6,10 @@ import { render } from 'react-dom'
 // import CustomLinkExample from './components/custom_link'
 // import PreExample from './components/prevent_transtion'
 // import NotMatchExample from './components/not_match'
-import RecursiveExample from './components/recursive_path'
+// import RecursiveExample from './components/recursive_path'
+import SidebarExample from './components/sidebar'
 
 render(
-  <RecursiveExample />,
+  <SidebarExample />,
   document.getElementById('root')
 )

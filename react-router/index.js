@@ -7,9 +7,10 @@ import { render } from 'react-dom'
 // import PreExample from './components/prevent_transtion'
 // import NotMatchExample from './components/not_match'
 // import RecursiveExample from './components/recursive_path'
-import SidebarExample from './components/sidebar'
+// import SidebarExample from './components/sidebar'
+import { TransitionExample } from './components/transtion_example'
 
 render(
-  <SidebarExample />,
+  <TransitionExample />,
   document.getElementById('root')
 )

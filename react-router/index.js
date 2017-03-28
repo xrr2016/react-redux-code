@@ -8,9 +8,10 @@ import { render } from 'react-dom'
 // import NotMatchExample from './components/not_match'
 // import RecursiveExample from './components/recursive_path'
 // import SidebarExample from './components/sidebar'
-import { TransitionExample } from './components/transtion_example'
+// import { TransitionExample } from './components/transtion_example'
+import AmbiguousExample from './components/ambiguous_match'
 
 render(
-  <TransitionExample />,
+  <AmbiguousExample />,
   document.getElementById('root')
 )

@@ -9,9 +9,10 @@ import { render } from 'react-dom'
 // import RecursiveExample from './components/recursive_path'
 // import SidebarExample from './components/sidebar'
 // import { TransitionExample } from './components/transtion_example'
-import AmbiguousExample from './components/ambiguous_match'
+// import AmbiguousExample from './components/ambiguous_match'
+import RouteConfigExample from './components/roucte_config'
 
 render(
-  <AmbiguousExample />,
+  <RouteConfigExample />,
   document.getElementById('root')
 )

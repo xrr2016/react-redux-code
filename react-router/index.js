@@ -10,9 +10,10 @@ import { render } from 'react-dom'
 // import SidebarExample from './components/sidebar'
 // import { TransitionExample } from './components/transtion_example'
 // import AmbiguousExample from './components/ambiguous_match'
-import RouteConfigExample from './components/roucte_config'
+// import RouteConfigExample from './components/roucte_config'
+import ModalGallery from './components/modal_gallery'
 
 render(
-  <RouteConfigExample />,
+  <ModalGallery />,
   document.getElementById('root')
 )

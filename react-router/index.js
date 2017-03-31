@@ -11,7 +11,8 @@ import { render } from 'react-dom'
 // import { TransitionExample } from './components/transtion_example'
 // import AmbiguousExample from './components/ambiguous_match'
 // import RouteConfigExample from './components/roucte_config'
-import ModalGallery from './components/modal_gallery'
+// import ModalGallery from './components/modal_gallery'
+import ModalGallery from './components/modalGallery'
 
 render(
   <ModalGallery />,

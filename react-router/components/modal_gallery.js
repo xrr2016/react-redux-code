@@ -40,15 +40,11 @@ const IMAGES = [
   {id: 4, title: '薄篮', color: '#0094c8'}
 ]
 
-const Thumbnail = ({ color }) => (
-  <div style={{width: 50, height: 50, lineHeight: 50, fontSize: '12px', textAlign: 'center', backgroundColor: color}}>
-    {color}
-  </div>
-)
+const Thumbnail = ({ color }) =>
+  <div style={{width: 50, height: 50, lineHeight: 50, fontSize: '12px', textAlign: 'center', backgroundColor: color}}>{color}</div>
 
-const Image = ({ color }) => (
+const Image = ({ color }) =>
   <div style={{width: '100%', height: 400, lineHeight: 400, fontSize: '20px', textAlign: 'center', backgroundColor: color}}>{color}</div>
-)
 
 const Home = () => (
   <div>
@@ -122,9 +118,7 @@ const Modal = ({ match, history }) => {
 }
 
 const ModalGallery = () => (
-  <Router>
-    <Route component={ModalSwitch} />
-  </Router>
+  <Router><Route component={ModalSwitch} /></Router>
 )
 
 export default ModalGallery

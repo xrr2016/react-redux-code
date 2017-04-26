@@ -1,39 +1,41 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 import AppleItem from '../components/AppleItem'
+import action from '../actions/appleAction'
 
 class AppleBasket extends Component {
   render () {
-    let { state } = this.props
-    let mockState = {
-      isPicking: false,
-      newAppleId: 3,
-      apples: [
-        {
-          id: 1,
-          weight: 235,
-          isEaten: true
-        },
-        {
-          id: 2,
-          weight: 256,
-          isEaten: false
-        }
-      ]
-    }
+    let { state, dispacth } = this.props
+    // let mockState = {
+    //   isPicking: false,
+    //   newAppleId: 3,
+    //   apples: [
+    //     {
+    //       id: 1,
+    //       weight: 235,
+    //       isEaten: true
+    //     },
+    //     {
+    //       id: 2,
+    //       weight: 256,
+    //       isEaten: false
+    //     }
+    //   ]
+    // }
 
-    state = mockState
-    let stats = {
-      appleNow: {
-        quantity: 0,
-        weight: 0
-      },
-      appleEaten: {
-        quantity: 0,
-        weight: 0
-      }
-    }
+    // state = mockState
+    // let stats = {
+    //   appleNow: {
+    //     quantity: 0,
+    //     weight: 0
+    //   },
+    //   appleEaten: {
+    //     quantity: 0,
+    //     weight: 0
+    //   }
+    // }
 
     state.apples.map(apple => {
       let selector = apple.isEaten ? 'appleEaten' : 'appleNow'
@@ -65,11 +67,15 @@ class AppleBasket extends Component {
           </section>
         </div>
         <ul className='apple-list'>
-          {state.apples.map(apple => <AppleItem key={apple.id} state={apple} />
+          {state.apples.map(apple => <AppleItem
+            key={apple.id}
+            state={apple}
+            actions={{eatApple: id => dispatch(actions.eatApple(id))}}
+            />
            )}
         </ul>
         <div className='btn-div'>
-          <button>
+          <button onClick={() => dispatch(actions.pickApple())}>
             摘苹果
           </button>
         </div>
@@ -78,10 +84,16 @@ class AppleBasket extends Component {
   }
 }
 
-function select (state) {
+function selectState(state) {
   return {
     state: state.appleBasket
   }
 }
 
-export default connect()(AppleBasket)
+function buildActionDispatcher(dispatch) {
+  return {
+      actions: bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(selectState, buildActionDispatcher)(AppleBasket)
